@@ -58,4 +58,8 @@
     .card {
         @apply flex flex-col gap-6
     }
+
+    .footer-nav-link {
+        @apply text-neutral-gray uppercase font-bold text-sm
+    }
 }
