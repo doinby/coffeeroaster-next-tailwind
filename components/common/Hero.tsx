@@ -17,8 +17,8 @@ export default function Hero(props: HeroProps) {
       id='hero-section'
       className={`${bgImg} bg-center bg-cover bg-no-repeat place-items-center rounded-lg`}
     >
-      <h2 className='text-light-cream text-5xl'>{title}</h2>
-      <p className='text-center'>{desc}</p>
+      <h2 className='text-light-cream'>{title}</h2>
+      <p className='text-light-cream/75 text-center'>{desc}</p>
       {children}
     </section>
   );
