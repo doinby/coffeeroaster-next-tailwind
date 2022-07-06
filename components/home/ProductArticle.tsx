@@ -8,7 +8,7 @@ type ProductArticleProps = {
 export default function ProductArticle(props: ProductArticleProps) {
   const {title, imgUrl, desc: description} = props;
   return (
-    <article className='product-container flex flex-col gap-6 text-center place-items-center'>
+    <article className='card text-center place-items-center'>
       <img className='w-48' src={imgUrl} alt={title} />
       <h4>{title}</h4>
       <p>{description}</p>
