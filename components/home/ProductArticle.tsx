@@ -2,11 +2,11 @@
 type ProductArticleProps = {
   title: string;
   imgUrl: string;
-  description: string;
+  desc: string;
 };
 
 export default function ProductArticle(props: ProductArticleProps) {
-  const {title, imgUrl, description} = props;
+  const {title, imgUrl, desc: description} = props;
   return (
     <article className='product-container flex flex-col gap-6 text-center place-items-center'>
       <img className='w-48' src={imgUrl} alt={title} />

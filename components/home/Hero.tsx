@@ -4,7 +4,7 @@ export default function Hero() {
       id='hero-section'
       className='bg-hero-img bg-center bg-cover bg-no-repeat place-items-center rounded-lg'
     >
-      <h2 className='text-white'>Great coffee made simple.</h2>
+      <h2 className='text-light-cream'>Great coffee made simple.</h2>
       <p className='text-center'>
         Start your mornings with the world’s best coffees. Try our expertly
         curated artisan coffees from our best roasters delivered directly to
