@@ -6,7 +6,7 @@
 
 @layer base {
     body {
-        @apply font-sans text-[16px] leading-[26px] w-full bg-light-cream
+        @apply font-sans text-[16px] leading-[26px] w-full
     }
 
     nav {
