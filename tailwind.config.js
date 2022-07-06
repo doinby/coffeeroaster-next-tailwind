@@ -22,7 +22,10 @@ module.exports = {
     },
     extend: {
       backgroundImage: {
-        'hero-img': "url('/assets/home/mobile/image-hero-coffeepress.jpg')",
+        'home-hero-mobile':
+          "url('/assets/home/mobile/image-hero-coffeepress.jpg')",
+        'about-hero-mobile':
+          "url('/assets/about/mobile/image-hero-whitecup.jpg')",
       },
     },
   },
