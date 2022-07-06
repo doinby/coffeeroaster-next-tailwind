@@ -1,3 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,700;1,400;1,700&family=Fraunces:opsz,wght@9..144,900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+    body {
+        @apply font-sans text-[16px] leading-[26px] w-full
+    }
+
+    nav {
+        @apply text-[12px] leading-[15px]
+    }
+    
+    h1, h2, h3, h4, h5, button {
+        @apply font-serif font-black text-center text-dark-blue
+    }
+
+    h1 {
+        @apply text-[72px] leading-[72px]
+    }
+
+    h2 {
+        @apply text-[40px] leading-[42px] md:text-5xl
+    }
+
+    h3 {
+        @apply text-[32px] leading-9
+    }
+
+    h4 {
+        @apply text-2xl
+    }
+
+    p {
+        @apply text-neutral-gray
+    }
+}
+
+@layer components {
+    nav {
+        @apply mx-4 my-10 flex
+    }
+
+    section {
+        @apply flex flex-col mx-4 md:container gap-10 py-28 px-4
+    }
+
+    button {
+        @apply px-7 py-4
+    }
+
+    .btn-primary {
+        @apply bg-dark-cyan text-white rounded-lg
+    }
+}
