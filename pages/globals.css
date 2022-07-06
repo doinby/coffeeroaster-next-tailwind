@@ -6,7 +6,7 @@
 
 @layer base {
     body {
-        @apply font-sans text-[16px] leading-[26px] w-full
+        @apply font-sans text-[16px] leading-[26px] w-full bg-light-cream
     }
 
     nav {
@@ -53,5 +53,9 @@
 
     .btn-primary {
         @apply bg-dark-cyan text-white rounded-lg
+    }
+
+    .card {
+        @apply flex flex-col gap-6
     }
 }

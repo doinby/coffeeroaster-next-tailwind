@@ -2,6 +2,7 @@ import type {NextPage} from 'next';
 
 import Head from 'next/head';
 import Hero from '../components/home/Hero';
+import HowItWorks from '../components/home/HowItWorks';
 import OurCollection from '../components/home/OurCollection';
 import WhyUs from '../components/home/WhyUs';
 import Nav from '../components/Nav';
@@ -23,6 +24,7 @@ const Home: NextPage = () => {
         <Hero />
         <OurCollection />
         <WhyUs />
+        <HowItWorks />
       </main>
     </>
   );
