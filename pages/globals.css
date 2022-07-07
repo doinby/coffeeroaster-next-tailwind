@@ -59,6 +59,10 @@
         @apply bg-dark-cyan text-white rounded-lg
     }
 
+    .btn-disabled {
+        @apply bg-light-gray text-white rounded-lg
+    }
+
     .card {
         @apply flex flex-col gap-6
     }

@@ -35,7 +35,7 @@ export default function SubscriptionOptions(
   return (
     <section id='subscription-options-section' className='mx-0 px-0'>
       {/* Option 1/5 */}
-      <OptionCard id='preference' question='How do you drink your coffee?'>
+      <OptionCard value={preference} question='How do you drink your coffee?'>
         <RadioGroup
           value={preference}
           onChange={setPreference}
@@ -72,7 +72,7 @@ export default function SubscriptionOptions(
       </OptionCard>
 
       {/* Option 2/5 */}
-      <OptionCard id='beanType' question='What type of coffee?'>
+      <OptionCard value={beanType} question='What type of coffee?'>
         <RadioGroup
           value={beanType}
           onChange={setBeanType}
@@ -109,7 +109,7 @@ export default function SubscriptionOptions(
       </OptionCard>
 
       {/* Option 3/5 */}
-      <OptionCard id='quantity' question='How much would you like?'>
+      <OptionCard value={quantity} question='How much would you like?'>
         <RadioGroup
           value={quantity}
           onChange={setQuantity}
@@ -146,7 +146,7 @@ export default function SubscriptionOptions(
       </OptionCard>
 
       {/* Option 4/5 */}
-      <OptionCard id='grindOption' question='Want us to grind them?'>
+      <OptionCard value={grindOption} question='Want us to grind them?'>
         <RadioGroup
           value={grindOption}
           onChange={setGrindOption}
@@ -182,8 +182,8 @@ export default function SubscriptionOptions(
         </RadioGroup>
       </OptionCard>
 
-      {/* Option 4/5 */}
-      <OptionCard id='delivery' question='How often should we deliver?'>
+      {/* Option 5/5 */}
+      <OptionCard value={delivery} question='How often should we deliver?'>
         <RadioGroup
           value={delivery}
           onChange={setDelivery}

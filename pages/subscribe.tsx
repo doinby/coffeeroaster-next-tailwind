@@ -15,8 +15,18 @@ const Subscribe: NextPage = () => {
   const [quantity, setQuantity] = useState(null);
   const [grindOption, setGrindOption] = useState(null);
   const [delivery, setDelivery] = useState(null);
+
+  const currentOptions = [
+    preference,
+    beanType,
+    quantity,
+    grindOption,
+    delivery,
+  ];
+  const hasValue = (value) => value !== null;
+  const isPlanComplete = () => currentOptions.every(hasValue);
+
   const [isModalOpen, setIsModalOpen] = useState(false);
-  console.log('isModalOpen:', isModalOpen);
 
   return (
     <>
@@ -56,9 +66,14 @@ const Subscribe: NextPage = () => {
           </div>
           <button
             onClick={() => setIsModalOpen(true)}
-            className='btn-primary place-self-center'
+            disabled={isPlanComplete() ? false : true}
+            className={`${
+              isPlanComplete()
+                ? 'btn-primary'
+                : 'btn-disabled cursor-not-allowed'
+            } place-self-center`}
           >
-            Create my plan!
+            Confirm Plan
           </button>
         </section>
 

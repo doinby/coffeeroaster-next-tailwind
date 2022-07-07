@@ -23,31 +23,19 @@ export default function SummaryModal(props: SummaryModalProps) {
   } = props;
 
   return (
-    // <Dialog open={isOpen} onClose={() => setIsOpen(false)}>
-    //   <Dialog.Panel>
-    //     <Dialog.Title as='h3'>Order Summary</Dialog.Title>
-    //     <p>Hello</p>
-    //     {/* <Dialog.Description>Hello</Dialog.Description> */}
-    //   </Dialog.Panel>
-    // </Dialog>
     <Dialog
       open={isOpen}
       onClose={() => setIsOpen(false)}
-      className='bg-dark-blue/20 fixed w-screen h-screen top-0 left-0 flex place-items-center'
+      className='bg-dark-blue/75 fixed w-screen h-screen top-0 left-0 flex place-items-center'
     >
-      <Dialog.Panel className='bg-light-cream mx-6 rounded-lg'>
-        <Dialog.Title as='h3' className='text-white bg-dark-blue text-left p-6'>
+      <Dialog.Panel className='bg-light-cream mx-2 rounded-lg'>
+        <Dialog.Title
+          as='h3'
+          className='text-white bg-dark-blue text-left p-6 rounded-t-lg'
+        >
           Order Summary
         </Dialog.Title>
-        {/* <Dialog.Description>
-          This will permanently deactivate your account
-        </Dialog.Description> */}
-
-        {/* <p>
-          Are you sure you want to deactivate your account? All of your data
-          will be permanently removed. This action cannot be undone.
-        </p> */}
-        <Dialog.Description className='p-6'>
+        <Dialog.Description as='div' className='p-6'>
           <Summary
             preference={preference}
             beanType={beanType}
@@ -63,7 +51,7 @@ export default function SummaryModal(props: SummaryModalProps) {
           </small>
         </Dialog.Description>
 
-        <button onClick={() => setIsOpen(false)}>Cancel</button>
+        {/* <button onClick={() => setIsOpen(false)}>Cancel</button> */}
       </Dialog.Panel>
     </Dialog>
   );

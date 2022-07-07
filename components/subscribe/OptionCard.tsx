@@ -2,22 +2,29 @@ import {ReactNode, Fragment, useState} from 'react';
 import {Disclosure, Transition} from '@headlessui/react';
 
 type OptionCardProps = {
-  id: string;
+  value: string | null;
   question: string;
   children: ReactNode;
 };
 
 export default function OptionCard(props: OptionCardProps) {
-  const {id, question, children} = props;
+  const {value, question, children} = props;
   const [isShown, setIsShown] = useState(true);
 
   return (
-    <Disclosure id={id} as='article'>
+    <Disclosure as='article'>
       <Disclosure.Button
         onClick={() => setIsShown(!isShown)}
         className='flex items-center gap-2 justify-between w-full px-6'
       >
-        <h4 className='text-left text-neutral-gray'>{question}</h4>
+        <h4 className='text-left text-neutral-gray'>
+          {question}{' '}
+          <span
+            className={`${value === null ? 'inline-block' : 'hidden'} text-red`}
+          >
+            *
+          </span>
+        </h4>
         <Transition.Child
           unmount={false}
           enter={'transform duration-300'}
