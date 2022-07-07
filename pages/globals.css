@@ -43,12 +43,16 @@
         @apply mx-4 my-10 flex
     }
 
+    main {
+        @apply flex flex-col
+    }
+
     section {
-        @apply flex flex-col mx-4 md:container gap-10 py-28 px-4
+        @apply flex flex-col mx-6 md:container gap-10 py-28 px-4
     }
 
     button {
-        @apply px-7 py-4
+        @apply px-10 py-4
     }
 
     .btn-primary {

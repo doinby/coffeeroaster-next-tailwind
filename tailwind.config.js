@@ -26,6 +26,8 @@ module.exports = {
           "url('/assets/home/mobile/image-hero-coffeepress.jpg')",
         'about-hero-mobile':
           "url('/assets/about/mobile/image-hero-whitecup.jpg')",
+        'subscribe-hero-mobile':
+          "url('/assets/plan/mobile/image-hero-blackcup.jpg')",
       },
     },
   },
