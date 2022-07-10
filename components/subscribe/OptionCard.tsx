@@ -5,22 +5,33 @@ type OptionCardProps = {
   value: string | null;
   question: string;
   children: ReactNode;
+  isGrindOptionDisabled?: boolean;
 };
 
 export default function OptionCard(props: OptionCardProps) {
-  const {value, question, children} = props;
-  const [isShown, setIsShown] = useState(true);
+  const {value, question, children, isGrindOptionDisabled} = props;
+
+  const [isShown, setIsShown] = useState(() =>
+    isGrindOptionDisabled === true ? false : true
+  );
 
   return (
     <Disclosure as='article'>
       <Disclosure.Button
         onClick={() => setIsShown(!isShown)}
-        className='flex items-center gap-2 justify-between w-full px-6'
+        disabled={isGrindOptionDisabled}
+        className={`${
+          isGrindOptionDisabled ? 'cursor-not-allowed' : ''
+        } flex items-center gap-2 justify-between w-full px-6`}
       >
         <h4 className='text-left text-neutral-gray'>
-          {question}{' '}
+          {isGrindOptionDisabled ? 'No grind option for Capsule' : question}{' '}
           <span
-            className={`${value === null ? 'inline-block' : 'hidden'} text-red`}
+            className={`${
+              value === null && !isGrindOptionDisabled
+                ? 'inline-block'
+                : 'hidden'
+            } text-red`}
           >
             *
           </span>
@@ -36,13 +47,13 @@ export default function OptionCard(props: OptionCardProps) {
           <img
             src='/assets/plan/desktop/icon-arrow.svg'
             alt='Arrow Icon'
-            className='w-6'
+            className={`${isGrindOptionDisabled ? 'hidden' : 'block'} w-6`}
           />
         </Transition.Child>
       </Disclosure.Button>
       <Transition
         as={Fragment}
-        show={isShown}
+        show={isGrindOptionDisabled === true ? false : isShown}
         enter={'transition duration-100 ease-out'}
         enterFrom={'transform scale-95 opacity-0'}
         enterTo={'transform scale-100 opacity-100'}

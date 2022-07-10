@@ -23,8 +23,11 @@ const Subscribe: NextPage = () => {
     grindOption,
     delivery,
   ];
+
   const hasValue = (value) => value !== null;
   const isPlanComplete = () => currentOptions.every(hasValue);
+
+  const isGrindOptionDisabled = preference === 'Capsule' ? true : false;
 
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -51,6 +54,7 @@ const Subscribe: NextPage = () => {
           setGrindOption={setGrindOption}
           delivery={delivery}
           setDelivery={setDelivery}
+          isGrindOptionDisabled={isGrindOptionDisabled}
         />
         <section id='summary-section' className='px-0 pt-0'>
           <div className='bg-dark-blue px-6 py-10 rounded-lg w-full flex flex-col gap-4'>

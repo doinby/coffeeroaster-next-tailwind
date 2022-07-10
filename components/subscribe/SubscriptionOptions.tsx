@@ -1,3 +1,5 @@
+import {useState} from 'react';
+
 import {RadioGroup} from '@headlessui/react';
 
 import OptionCard from './OptionCard';
@@ -14,6 +16,7 @@ type PushSubscriptionOptionsProps = {
   setQuantity: Function;
   setGrindOption: Function;
   setDelivery: Function;
+  isGrindOptionDisabled: boolean;
 };
 
 export default function SubscriptionOptions(
@@ -30,6 +33,7 @@ export default function SubscriptionOptions(
     setQuantity,
     setGrindOption,
     setDelivery,
+    isGrindOptionDisabled,
   } = props;
 
   return (
@@ -146,7 +150,11 @@ export default function SubscriptionOptions(
       </OptionCard>
 
       {/* Option 4/5 */}
-      <OptionCard value={grindOption} question='Want us to grind them?'>
+      <OptionCard
+        value={grindOption}
+        question='Want us to grind them?'
+        isGrindOptionDisabled={isGrindOptionDisabled}
+      >
         <RadioGroup
           value={grindOption}
           onChange={setGrindOption}
